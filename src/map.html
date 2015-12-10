@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://hpneo.github.io/gmaps/gmaps.js"></script>
+    <script src="./map.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <form class="well col-md-6 col-md-offset-3">
+        <div class="row">
+	  <div class="col-md-12">
+	    <label class="col-md-4">Start Address</label>
+	    <input class="col-md-8" id="src" value="Paris" type="text">
+	  </div>
+	  <div class="col-md-12">
+	    <label class="col-md-4">Destination Address</label>
+            <input class="col-md-8" id="dest" value="Barcelone" type="text">
+	  </div>
+	  <div class="col-md-12">
+            <label class="col-md-4">Transport</label>
+	    <select class="col-md-8" name="transport" id="transport">
+	      <option value="walking" selected>A pied</option>
+	      <option value="driving">En voiture</option>
+	    </select>
+	  </div>
+	  <div class="text-center">
+	    <button id="create_map" style="margin-top:10px;" class="btn btn-primary" type="submit">valider</button>
+	  </div>
+        </div>
+      </form>
+      <div class="col-md-6 col-md-offset-3">
+	<div id="mapCanvas" style="width:500px; height:500px;"></div>
+      </div>
+      <div class="row">
+	<div class="col-md-6 col-md-offset-3" style="text-align:center;">
+	  <div>
+	    Temps : <span id="hour" /><br />
+	  </div>
+	  <div>
+	    Distance : <span id="distance" />
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
